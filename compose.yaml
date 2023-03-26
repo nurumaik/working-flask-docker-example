@@ -3,9 +3,6 @@ services:
     build:
       context: app
       target: builder
-      args:
-        BUILDPLATFORM: linux/amd64
-        DOCKER_BUILDKIT: 1
     # flask requires SIGINT to stop gracefully
     # (default stop signal from Compose is SIGTERM)
     stop_signal: SIGINT
